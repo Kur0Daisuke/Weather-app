@@ -1,8 +1,9 @@
 import React from "react";
+import axios from 'axios'
 import './App.css';
 import WeatherInfo from "./WeatherInfo.js";
 
-
+const baseURL = "https://weather-fetch-2hhr.onrender.com/api/";
 
 function App() {
   const [name, setName] = React.useState("");
@@ -13,9 +14,11 @@ function App() {
   const load = async (Toload) => {
     setFechStatus(true)
     try {
-      const data = await (await fetch(`/api/${Toload}`)).json()
-      setData(JSON.parse(data.message))
-      setFechStatus(false)
+      axios.get(baseURL+name).then((response) => {
+        setData(JSON.parse(response.data.message))
+        setFechStatus(false)
+      });
+      
     } catch (err) {
       setData("e")
     }

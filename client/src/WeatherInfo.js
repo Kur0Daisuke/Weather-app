@@ -5,7 +5,6 @@ function WeatherInfo(params) {
     const getDayName = (date = new Date(), locale = 'en-US') => {
         return date.toLocaleDateString(locale, {weekday: 'long'});
     }
-    console.log(params)
     return (
         params.loading ? <>
             <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
