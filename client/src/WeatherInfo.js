@@ -20,7 +20,7 @@ function WeatherInfo(params) {
                 <div className="Row">
                     <h3>{getDayName(new Date())}</h3>
                     <p>{params.data.currentConditions.datetime}</p>
-                    <img alt="weather" src={`https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/PNG/1st%20Set%20-%20Color/${params.data.currentConditions.icon}.png`}/>
+                    <img alt="weather" src={`https://raw.githubusercontent.com/visualcrossing/WeatherIcons/main/SVG/1st%20Set%20-%20Color/${params.data.currentConditions.icon}.svg`}/>
                     
                     <p>{params.data.currentConditions.conditions}</p>
                 </div>
