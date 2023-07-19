@@ -13,7 +13,7 @@ function App() {
   const load = async (Toload) => {
     setFechStatus(true)
     try {
-      const data = await (await fetch(`https://weather-fetch-2hhr.onrender.com/api/${Toload}`)).json()
+      const data = await (await fetch(`/api/${Toload}`)).json()
       setData(JSON.parse(data.message))
       setFechStatus(false)
     } catch (err) {
