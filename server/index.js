@@ -22,6 +22,7 @@ app.get("/api/:location", (req, res) => {
         // console.log(response.statusCode);
      
         // Printing body
+        res.header("Access-Control-Allow-Origin", "*");
         res.json({ message: body });
         
     });
